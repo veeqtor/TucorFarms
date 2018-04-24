@@ -1,0 +1,95 @@
+#bg-login {
+  background-image: url("/img/maturehen.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  .copyright {
+    background-color: rgba(8, 13, 21, 0.6);
+    //position: absolute;
+    width: 100%;
+    bottom: 0;
+    color: $lightShade !important;
+    a {
+      text-decoration: none;
+      color: $lightAccent;
+    }
+  }
+
+  a {
+    color: $mainColorII;
+    text-decoration: none;
+    padding: 0.125rem;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom-color 0.6s;
+  }
+
+  a:hover, a:focus {
+    border-bottom: 1px solid $mainColor;
+    color: #757575;
+  }
+}
+
+#login-page {
+  padding-bottom: 5rem;
+  min-height: 100vh;
+  background-color: rgba(8, 13, 21, 0.6);
+
+  .logo {
+    padding: 3rem 0;
+    a {
+      color: $lightShade;
+
+    }
+  }
+
+  .form-content {
+    background-color: $lightShade;
+    color: $mainColorII;
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid $lightAccent;
+  }
+
+  .login-form, .reg-form {
+    //min-height: 100vh;
+    padding: 3rem 1.25rem;
+    //color: #4f4964;
+    text-align: center;
+  }
+
+  //.form-control-sm,
+  //.form-control-sm:focus {
+  //  background-color: $lightShade;
+  //  border: none;
+  //  border-bottom: 1px solid #b2b2b2;
+  //
+  //  border-radius: 0;
+  //  //text-align: center;
+  //}
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 575px) {
+
+  #login-page {
+
+    .form-content {
+
+      max-width: 300px;
+    }
+
+  }
+
+}
+
+
+
+
+
