@@ -482,7 +482,7 @@ $(document).ready(function () {
                 "             " + cartArray[i].item + "\n" +
                 "          </td>" +
                 "          <td class='d-inline-flex'>" +
-                "              <input type='number' min='1' data-id='" + cartArray[i].id + "' name='qty' class='item-count form-control form-control-sm' value='" + cartArray[i].qty + "'>&nbsp;" + cartArray[i].per + "\n" +
+                "              <input type='number' min='1' data-id='" + cartArray[i].id + "' name='qty' class='w-50 item-count form-control form-control-sm' value='" + cartArray[i].qty + "'>&nbsp;" + cartArray[i].per + "\n" +
                 "          </td>" +
                 "          <td>" + cartArray[i].price.toLocaleString() + "</td>" +
                 "          <td>" + cartArray[i].total + "</td>" +

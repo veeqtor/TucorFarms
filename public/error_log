@@ -1,0 +1,4 @@
+[26-Mar-2018 17:41:18 UTC] PHP Warning:  require(/home/optimumtradeorg/public_html/test/../vendor/autoload.php): failed to open stream: No such file or directory in /home/optimumtradeorg/public_html/test/index.php on line 24
+[26-Mar-2018 17:41:18 UTC] PHP Fatal error:  require(): Failed opening required '/home/optimumtradeorg/public_html/test/../vendor/autoload.php' (include_path='.:/opt/alt/php71/usr/share/pear') in /home/optimumtradeorg/public_html/test/index.php on line 24
+[26-Mar-2018 17:42:54 UTC] PHP Warning:  require(/home/optimumtradeorg/public_html/test/../vendor/autoload.php): failed to open stream: No such file or directory in /home/optimumtradeorg/public_html/test/index.php on line 24
+[26-Mar-2018 17:42:54 UTC] PHP Fatal error:  require(): Failed opening required '/home/optimumtradeorg/public_html/test/../vendor/autoload.php' (include_path='.:/opt/alt/php71/usr/share/pear') in /home/optimumtradeorg/public_html/test/index.php on line 24

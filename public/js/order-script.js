@@ -49,58 +49,46 @@ $(document).ready(function () {
             data: {reference_id: ref},
             url: '/admin/dashboard/order/reference',
         }).done(function (data) {
-            if (data.length === 1) {
-                console.log('true');
-                let itemArray = JSON.parse(data[0].purchases);
-                let keys = Object.keys(itemArray);
-                tableData = "<tr>\n";
-                tableData += "<td>";
-                for (let i = 0; i < keys.length - 1; i++) {
-                    let key = keys[i];
-                    tableData += "<i class='text-muted'>" + itemArray[key].item + "</i>&nbsp;&times;&nbsp;<small>" + itemArray[key].qty + "</small></br>";
-                }
-                tableData += "</td>";
-                tableData += "<td>&#8358;&nbsp;" + itemArray[keys.length - 1].grandTotal + "</td>\n";
-
-                let date = new Date(data[0].created_at).toLocaleDateString(undefined, {
-                    day: 'numeric',
-                    month: 'short',
-                    year: 'numeric'
-                });
-                tableData += "<td>" + date + "</td>\n";
-                tableData += "<td>\n";
-                if (data[0].received === null) {
-                    tableData += "<a href='javascript:void(0)' data-id=" + data[0].id + "  class='process badge  badge-info'>\n";
-                    tableData += "<i class='fa fa-cogs'>&nbsp;&nbsp;</i>Process\n";
-                    tableData += "</a>\n";
-                } else if (data[0].received == 1) {
-                    tableData += "<span class='badge badge-pill badge-info'>Processing</span>\n";
-                    tableData += "<a href='javascript:void(0)' data-id=" + data[0].id + "  class='print badge  badge-secondary'>\n";
-                    tableData += "<i class='fa fa-print'>&nbsp;&nbsp;</i>Print\n";
-                    tableData += "</a>\n";
-                    tableData += "<a href='javascript:void(0)' data-id=" + data[0].id + "  class='mark-as-delivered badge badge-success'>\n";
-                    tableData += "<i class='fa fa-check-square'>&nbsp;&nbsp;</i><span>Mark as delivered</span>\n";
-                    tableData += "</a>\n";
-                } else if (data[0].received == 2) {
-                    tableData += "<span class='badge badge-pill badge-success'>DELIVERED</span>\n";
-                    tableData += "<a href='javascript:void(0)' data-id=" + data[0].id + "  class='print badge  badge-secondary'>\n";
-                    tableData += "<i class='fa fa-print'>&nbsp;&nbsp;</i>Print\n";
-                    tableData += "</a>\n";
-                }
-                tableData += "</td>\n";
-                tableData += "</tr>";
-
-                $('#orderData').html(tableData);
+            let itemArray = JSON.parse(data[0].purchases);
+            let keys = Object.keys(itemArray);
+            tableData = "<tr>\n";
+            tableData += "<td>";
+            for (let i = 0; i < keys.length - 1; i++) {
+                let key = keys[i];
+                tableData += "<i class='text-muted'>" + itemArray[key].item + "</i>&nbsp;&times;&nbsp;<small>" + itemArray[key].qty + "</small></br>";
             }
-            else {
-                let error = '<div class="alert alert-danger text-center">\n' +
-                    '                        <i class="fa fa-exclamation-circle">&nbsp;</i>\n' +
-                    '                        Invalid reference ID!!\n' +
-                    '                    </div>';
+            tableData += "</td>";
+            tableData += "<td>&#8358;&nbsp;" + itemArray[keys.length - 1].grandTotal + "</td>\n";
 
-                $('#OrdersTable').html(error);
+            let date = new Date(data[0].created_at).toLocaleDateString(undefined, {
+                day: 'numeric',
+                month: 'short',
+                year: 'numeric'
+            });
+            tableData += "<td>" + date + "</td>\n";
+            tableData += "<td>\n";
+            if (data[0].received === null) {
+                tableData += "<a href='javascript:void(0)' data-id=" + data[0].id + "  class='process badge  badge-info'>\n";
+                tableData += "<i class='fa fa-cogs'>&nbsp;&nbsp;</i>Process\n";
+                tableData += "</a>\n";
+            } else if (data[0].received == 1) {
+                tableData += "<span class='badge badge-pill badge-warning'>Processed</span>\n";
+                tableData += "<a href='javascript:void(0)' data-id=" + data[0].id + "  class='print badge  badge-secondary'>\n";
+                tableData += "<i class='fa fa-print'>&nbsp;&nbsp;</i>Print\n";
+                tableData += "</a>\n";
+                tableData += "<a href='javascript:void(0)' data-id=" + data[0].id + "  class='mark-as-delivered badge badge-success'>\n";
+                tableData += "<i class='fa fa-check-square'>&nbsp;&nbsp;</i><span>Mark as delivered</span>\n";
+                tableData += "</a>\n";
+            } else if (data[0].received == 2) {
+                tableData += "<span class='badge badge-pill badge-success'>DELIVERED</span>\n";
+                tableData += "<a href='javascript:void(0)' data-id=" + data[0].id + "  class='print badge  badge-secondary'>\n";
+                tableData += "<i class='fa fa-print'>&nbsp;&nbsp;</i>Print\n";
+                tableData += "</a>\n";
             }
+            tableData += "</td>\n";
+            tableData += "</tr>";
 
+            $('#orderData').html(tableData);
         });
     }
 

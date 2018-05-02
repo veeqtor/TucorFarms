@@ -224,7 +224,6 @@ class AdminController extends Controller
 
         $lowProducts = Product::where('quantity', '<', 5)->paginate(10);
 
-
         $categories = Category::pluck('type', 'id')->all();
 
         return view('admin.products', compact('editProduct', 'categories', 'products', 'lowProducts'));
@@ -289,6 +288,7 @@ class AdminController extends Controller
     /*
      * End - Products
      */
+
     public function order()
     {
         return view('admin.order');

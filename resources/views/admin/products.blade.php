@@ -213,7 +213,7 @@
                                 {!! Form::label('thumbnail', 'Thumbnail:') !!}
                                 <label for="photo_id" class="custom-file">
                                     <input class="form-control form-control-sm" name="thumbnail" type="file"
-                                           id="thumbnail" accept="image/*">
+                                           id="thumbnail">
                                     <span class="custom-file-control form-control form-control-sm"></span>
                                 </label>
                             </div>
@@ -283,7 +283,7 @@
                             {!! Form::label('thumbnail', 'Thumbnail:') !!}
                             <label for="photo_id" class="custom-file">
                                 <input class="form-control form-control-sm" name="thumbnail" type="file"
-                                       id="thumbnail" accept="image/*">
+                                       id="thumbnail">
                                 <span class="custom-file-control form-control form-control-sm"></span>
                             </label>
                         </div>

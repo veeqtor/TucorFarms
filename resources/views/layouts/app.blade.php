@@ -27,13 +27,13 @@
 
     <!--Bootstrap CSS-->
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
-    {{--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>--}}
-    <script src="{{asset('js/jquery-3.2.1.js')}}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--<script src="{{asset('js/jquery-3.2.1.js')}}"></script>-->
 
 </head>
 <body>
 <!-- preloader -->
-@yield('preloader')
+
 <!-- end preloader -->
 
 <!--Top Header-->
@@ -63,15 +63,11 @@
                                         class="fa fa-angle-down"></i><span
                                         class="sr-only">(current)</span></a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown01">
-                                @if(Auth::user()->isAdmin())
-                                    <a class="dropdown-item" href="{{route('dashboard')}}"><i
-                                                class="fa fa-dashboard">&nbsp;&nbsp;</i>Dashboard</a>
-                                @endif
-
-
+                                
                                 @if(!Auth::user()->isAdmin())
-                                    <a class="dropdown-item" href="{{route('user.edit', Auth::user()->id)}}"><i
+                                <a class="dropdown-item" href="{{route('user.edit', Auth::user()->id)}}"><i
                                                 class="fa fa-user">&nbsp;&nbsp;</i>Profile</a>
+                                    
                                     <a class="dropdown-item" href="{{route('user.history')}}"><i
                                                 class="fa fa-history">&nbsp;&nbsp;</i>My Orders
                                     </a>

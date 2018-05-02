@@ -77,20 +77,18 @@
                 <p>Orders</p>
             </div>
             <div class="table-responsive dash-content shadow">
-                <div id="OrdersTable">
-                    <table class="table">
-                        <thead>
-                        <tr>
-                            <th>Item&nbsp;Names&nbsp;&&nbsp;Qty</th>
-                            <th>Total</th>
-                            <th colspan="3">Date</th>
-                        </tr>
-                        </thead>
-                        <tbody id="orderData">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Item&nbsp;Names&nbsp;&&nbsp;Qty</th>
+                        <th>Total</th>
+                        <th colspan="3">Date</th>
+                    </tr>
+                    </thead>
+                    <tbody id="orderData">
 
-                        </tbody>
-                    </table>
-                </div>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
