@@ -5,7 +5,7 @@
 
 ## Installation
 
-Run the following commands in command the bash terminal
+Run the following commands in the bash terminal
 ```bash
 
 $ composer update
