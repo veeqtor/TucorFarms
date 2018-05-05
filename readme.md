@@ -1,7 +1,9 @@
 
 <p align="center">
 <h1>TucorFarms</h1>
-[![Build Status](https://travis-ci.com/veeqtor/TucorFarms.svg?branch=master)](https://travis-ci.com/veeqtor/TucorFarms)</p>
+[![Build Status](https://travis-ci.com/veeqtor/TucorFarms.svg?branch=master)](https://travis-ci.com/veeqtor/TucorFarms)
+
+https://travis-ci.com/veeqtor/TucorFarms.svg?branch=master</p>
 
 ## Installation
 
